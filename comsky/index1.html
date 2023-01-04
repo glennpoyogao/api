@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Mountains</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+
+					<header id="header">
+						<h1>ComSky</h1>
+						<p>Akito &nbsp;&bull;&nbsp; Don &nbsp;&bull;&nbsp; Glenn</p>	
+					</header>
+
+					<footer id="footer">
+						<span class="copyright">&copy; Design by: <a href="https://www.facebook.com/Anoproxy">SISKADONG</a>.</span>
+					</footer>
+
+			</div>
+		</div>
+		
+      <div class="quoteContainer">
+        <div id="quote"></div>
+        <div id="author"></div>
+      </div>
+    <script src="comsky/js/main.js" type="module"></script>
+		
+		<body>
+		
+		<h1>TEST</h1>
+		<ul></ul>
+
+	<script>
+const quotesFactsEl = document.getElementById('quotes');
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '5a1c6c22fcmsh158205c054eea43p14ef4bjsn58666b26f737',
+		'X-RapidAPI-Host': 'quotes15.p.rapidapi.com'
+	}
+};
+
+fetch('https://quotes15.p.rapidapi.com/quotes/random/?language_code=en', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+</html>
